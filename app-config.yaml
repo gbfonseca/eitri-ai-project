@@ -1,4 +1,4 @@
-application-id: 5cbc2ce6-534f-4c19-a6bb-b06f1381695f
+application-id: 42bfbc39-4a6c-4dee-bac6-c50a6603ba60
 bottom-tab-view-simulation:
   eitri-apps:
     - slug: "projeto-ai-home"
@@ -16,11 +16,8 @@ bottom-tab-view-simulation:
       initialization-params:
         type: "string"
         value: "tabIndex=2"
-    - slug: "projeto-ai-home"
-      title: "Ofertas"
-      initialization-params:
-        type: "string"
-        value: "tabIndex=3&route=LandingPage&landingPageName=ofertas&pageTitle=OFERTAS"
+    - slug: "projeto-ai-chat"
+      title: "Chat"
     - slug: "projeto-ai-account"
       title: "Perfil"
       initialization-params:
@@ -32,6 +29,10 @@ eitri-apps:
     alias: shared
     focus: false
     shared: true
+  - path: ./projeto-ai-chat
+    workspace: DEFAULT
+    focus: false
+    alias: chat
   - path: ./projeto-ai-home
     workspace: projeto-ai-home
     alias: home
@@ -51,7 +52,6 @@ eitri-apps:
     workspace: projeto-ai-checkout
     alias: checkout
     focus: false
-    shared: false
   - path: ./projeto-ai-account
     workspace: projeto-ai-account
     alias: account

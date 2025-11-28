@@ -7,6 +7,7 @@ import {
 } from "projeto-ai-shared";
 import MenuIcon from "../../assets/icons/menu-icon.svg";
 import DrawerContent from "../DrawerContent/DrawerContent";
+import {FaBrain} from "react-icons/fa"
 
 export default function Header(props) {
   const { cart, navigateToCart, navigateToSearch, drawerContent, startParams, safeAreaTop = false } =

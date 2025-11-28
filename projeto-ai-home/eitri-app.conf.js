@@ -4,7 +4,7 @@ module.exports = {
   "slug": "projeto-ai-home",
   "eitri-luminus": "1.78.3",
   "eitri-bifrost": "3.10.0",
-  "version": "0.1.34",
+  "version": "0.1.0",
   "public-key": "ee0b3488-900e-4bc3-a0ee-f0ae10f6bc9b",
   "applicationId": "42bfbc39-4a6c-4dee-bac6-c50a6603ba60",
   "id": "252b830a-bcc0-494a-bd72-eb4586df5e66",
@@ -13,7 +13,7 @@ module.exports = {
   "eitri-app-dependencies": {
     "projeto-ai-shared": {
       "isEitriAppShared": true,
-      "version": "0.1.24"
+      "version": "0.1.0"
     },
     "eitri-shopping-vtex-shared": {
       "isEitriAppShared": true,
@@ -24,6 +24,9 @@ module.exports = {
         "fallbackLng": "pt"
       },
       "version": "14.1.2"
+    },
+    "react-icons": {
+      version: "5.5.0"
     }
   },
   "type": "module"
