@@ -1,0 +1,143 @@
+{
+  "home": {
+    "labelHello": "Hello",
+    "labelLeave": "Leave",
+    "labelMyFavorites": "My Favorites",
+    "labelEditFavorites": "Add or Edit Your Favorites",
+    "labelMyAccount": "My Account",
+    "labelConfig": "Personal Information and Settings",
+    "labelMyOrders": "My Orders",
+    "labelHistoryOders": "Check Your Order History",
+    "menuItens": {
+      "myOrders": {
+        "name": "My Orders",
+        "description": "Check Your Order History"
+      },
+      "myAccount": {
+        "name": "My Account",
+        "description": "Personal Information and Settings"
+      },
+      "myFavorites": {
+        "name": "My Favorites",
+        "description": "Add or Edit Your Favorites"
+      },
+      "support": {
+        "name": "Support",
+        "description": "Contact us if you have any questions"
+      },
+      "termsConditions": {
+        "name": "Terms and Conditions",
+        "description": "Terms and Conditions"
+      },
+      "blog": {
+        "name": "Blog",
+        "description": "Blog"
+      }
+    }
+  },
+  "passwordReset": {
+    "messageRecovery": "We will send you a message with a code to recover your password",
+    "sendButton": "Send Code",
+    "messageError": "There was an error sending the recovery code. Please try again later.",
+    "recoveryPass": "Password Recovery",
+    "headerText": "Password",
+    "forgotPassTitle": "Change Password",
+    "forgotPass": "Forgot Password?",
+    "setEmail": "Enter Your Email"
+  },
+  "passwordResetCode": {
+    "messageEmail": "Enter your 6-digit password sent to the email",
+    "sendButton": "Continue",
+    "headerText": "Password",
+    "forgotPass": "Forgot Password?"
+  },
+  "passwordResetNewPass": {
+    "headerText": "Password",
+    "forgotPass": "Forgot Password?",
+    "newPass": "New Password",
+    "confirmPass": "Confirm Password",
+    "sendButton": "Confirm",
+    "messageError": "There was an error resetting the password. Please try again later.",
+    "passwordRequirements": "Password requirements",
+    "passwordRequirementsCharacters": "Minimum of 8 characters",
+    "passwordRequirementsNumber": "At least one number",
+    "passwordRequirementsUppercase": "At least one uppercase letter",
+    "passwordRequirementsLowercase": "At least one lowercase letter",
+    "passwordRequirementsCoincide": "Passwords must be the same"
+  },
+  "signIn": {
+    "errosSendAccess": "error sending email",
+    "errorInvalidUser": "Invalid Username or Password",
+    "wrongCredentials": "Incorrect Token",
+    "verifyAgain": "Check the information and try again",
+    "headerText": "Sign In",
+    "welcome": "Welcome Back!",
+    "formName": "Username or Email",
+    "formPass": "Password",
+    "formEmail": "Email",
+    "labelButton": "Login",
+    "labelAccessWithCode": "Login with Access Code",
+    "forgotPass": "Forgot Password?",
+    "noRegister": "No Account",
+    "formCodeVerification": "Verification Code",
+    "textSendCode": "Send Code",
+    "textResendCode": "Resend Code",
+    "labelLoginWithPass": "Login with Email and Password"
+  },
+  "orderStatusBadge": {
+    "cancel": "Cancelling Order",
+    "complete": "Order Complete",
+    "approved": "Payment Approved",
+    "pending": "Awaiting Payment",
+    "requestCancel": "Cancellation Requested",
+    "canceled": "Cancelled",
+    "waitAuthorization": "Waiting for Authorization",
+    "authorizeFulfillment": "Fulfillment Authorized",
+    "windowCancel": "Cancellation Window",
+    "readyInvoicing": "Ready for Invoicing",
+    "invoice": "Generate Invoice",
+    "created": "Created"
+  },
+  "orderList": {
+    "seeDetails": "SEE DETAILS",
+    "orderNumber": "Order Number",
+    "orderDate": "Order Date",
+    "price": "Price",
+    "totalItems": "Total Items"
+  },
+  "settings": {
+    "appConfiguration": "App Configuration",
+    "aboutUs": "About Us",
+    "repplayVideos": {
+      "name": "Play videos automatically",
+      "description": "The videos will be played automatically and may consume mobile internet data."
+    },
+    "menuItens": {
+      "personalInformation": {
+        "name": "Personal Information"
+      },
+      "notification": {
+        "name": "Notifications"
+      },
+      "lightMode": {
+        "name": "Light Mode"
+      }
+    }
+  },
+  "myAccount": {
+    "title": "My Account",
+    "editProfile": "Edit Profile",
+    "fields": {
+      "name": "Full Name",
+      "changePassword": "Change Password",
+      "birthDate": "Birth Date",
+      "email": "E-mail",
+      "cpf": "CPF",
+      "password": "Password",
+      "gender": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "other": "Other"
+    }
+  }
+}

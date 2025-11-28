@@ -1,0 +1,62 @@
+application-id: 5cbc2ce6-534f-4c19-a6bb-b06f1381695f
+bottom-tab-view-simulation:
+  eitri-apps:
+    - slug: "projeto-ai-home"
+      title: "Inicio"
+      initialization-params:
+        type: "string"
+        value: "tabIndex=0"
+    - slug: "projeto-ai-home"
+      title: "Categorias"
+      initialization-params:
+        type: "string"
+        value: "tabIndex=1&route=Categories"
+    - slug: "projeto-ai-cart"
+      title: "Carrinho"
+      initialization-params:
+        type: "string"
+        value: "tabIndex=2"
+    - slug: "projeto-ai-home"
+      title: "Ofertas"
+      initialization-params:
+        type: "string"
+        value: "tabIndex=3&route=LandingPage&landingPageName=ofertas&pageTitle=OFERTAS"
+    - slug: "projeto-ai-account"
+      title: "Perfil"
+      initialization-params:
+        type: "string"
+        value: "tabIndex=4"
+eitri-apps:
+  - path: ./projeto-ai-shared
+    workspace: projeto-ai-shared
+    alias: shared
+    focus: false
+    shared: true
+  - path: ./projeto-ai-home
+    workspace: projeto-ai-home
+    alias: home
+    focus: true
+    shared: false
+  - path: ./projeto-ai-pdp
+    workspace: projeto-ai-pdp
+    alias: pdp
+    focus: false
+    shared: false
+  - path: ./projeto-ai-cart
+    workspace: projeto-ai-cart
+    alias: cart
+    focus: false
+    shared: false
+  - path: ./projeto-ai-checkout
+    workspace: projeto-ai-checkout
+    alias: checkout
+    focus: false
+    shared: false
+  - path: ./projeto-ai-account
+    workspace: projeto-ai-account
+    alias: account
+    focus: false
+    shared: false
+# initialization-params:
+#   type: "string"
+#   value: "a=b"

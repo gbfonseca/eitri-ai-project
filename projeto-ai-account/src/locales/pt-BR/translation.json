@@ -1,0 +1,150 @@
+{
+  "home": {
+    "labelHello": "Olá",
+    "labelLeave": "Sair",
+    "labelMyFavorites": "Meus favoritos",
+    "labelEditFavorites": "Adicione ou edite seus favoritos",
+    "labelMyAccount": "Minha conta",
+    "labelConfig": "Informações pessoais e configurações",
+    "labelMyOrders": "Meus pedidos",
+    "labelHistoryOders": "Confira todo o histórico dos seus pedidos",
+    "menuItens": {
+      "myOrders": {
+        "name": "Meus pedidos",
+        "description": "Confira todo o histórico dos seus pedidos"
+      },
+      "myAccount": {
+        "name": "Minha conta",
+        "description": "Informações pessoais e configurações"
+      },
+      "myFavorites": {
+        "name": "Meus favoritos",
+        "description": "Adicione ou edite seus endereços de entrega"
+      },
+      "support": {
+        "name": "Suporte",
+        "description": "Entre em contato conosco em caso de dúvidas"
+      },
+      "termsConditions": {
+        "name": "Termos e condições",
+        "description": "Confira nossas políticas"
+      },
+      "blog": {
+        "name": "Blog",
+        "description": "Confira o nosso blog"
+      }
+    }
+  },
+  "passwordReset": {
+    "messageRecovery": "Vamos te mandar uma mensagem com um código para recuperar senha",
+    "sendButton": "Enviar código",
+    "messageError": "Houve um erro ao enviar o código de recuperação de senha. Tente novamente mais tarde.",
+    "recoveryPass": "Recuperação de senha",
+    "headerText": "Senha",
+    "forgotPassTitle": "Alterar senha",
+    "forgotPass": "Esqueceu a senha?",
+    "setEmail": "Digite seu e-mail"
+  },
+  "passwordResetCode": {
+    "messageEmail": "Digite o código de 4 dígitos enviado para o email ",
+    "sendButton": "Continuar",
+    "headerText": "Senha",
+    "forgotPass": "Esqueceu a senha?"
+  },
+  "passwordResetNewPass": {
+    "headerText": "Senha",
+    "forgotPass": "Esqueceu a senha?",
+    "newPass": "Nova senha",
+    "confirmPass": "Confirmar Senha",
+    "sendButton": "Confirmar",
+    "messageError": "Houve um erro ao redefinir a senha. Tente novamente mais tarde.",
+    "passwordRequirements": "Requisitos de senha",
+    "passwordRequirementsCharacters": "Mínimo de 8 caracteres",
+    "passwordRequirementsNumber": "Pelo menos um número",
+    "passwordRequirementsUppercase": "Pelo menos uma letra maiúscula",
+    "passwordRequirementsLowercase": "Pelo menos uma letra minúscula",
+    "passwordRequirementsCoincide": "As senhas precisam ser iguais",
+    "descriptionRecoveryCode": "Escolha sua nova senha conforme os critérios a seguir."
+  },
+  "signIn": {
+    "errosSendAccess": "erro ao enviar email",
+    "errorInvalidUser": "Usuário ou senha inválidos",
+    "wrongCredentials": "Token incorreto",
+    "verifyAgain": "Verifique as informaçoes e tente novamente",
+    "headerText": "Entrar",
+    "welcome": "Bem vindo de volta!",
+    "formName": "Nome de usuário ou e-mail",
+    "formPass": "Senha",
+    "formEmail": "Email",
+    "labelButton": "Login",
+    "labelAccessWithCode": "Login com código de acesso",
+    "forgotPass": "Esqueceu a senha?",
+    "noRegister": "Não tenho cadastro",
+    "formCodeVerification": "Código de verificação",
+    "textSendCode": "Enviar código",
+    "textResendCode": "Reenviar código",
+    "labelLoginWithPass": "Login com email e senha"
+  },
+  "orderStatusBadge": {
+    "cancel": "Cancelando pedido",
+    "complete": "Pedido completo",
+    "approved": "Pagamento aprovado",
+    "pending": "Aguardando pagamento",
+    "requestCancel": "Pedido cancelamento",
+    "canceled": "Cancelado",
+    "waitAuthorization": "Esperando autorizaçao",
+    "authorizeFulfillment": "Autorizado formulario",
+    "windowCancel": "Janela de cancelamento",
+    "readyInvoicing": "pronto para nota fiscal",
+    "invoice": "Gerar nota fiscal",
+    "created": "Criado"
+  },
+  "orderList": {
+    "seeDetails": "VER DETALHES",
+    "orderNumber": "Nº do pedido",
+    "orderDate": "Realizado em",
+    "price": "Valor",
+    "totalItems": "Total de itens"
+  },
+  "settings": {
+    "appConfiguration": "Configurações do aplicativo",
+    "aboutUs": "Sobre nós",
+    "repplayVideos": {
+      "name": "Reproduzir vídeos automaticamente",
+      "description": "Os vídeos serão reproduzidos automaticamente e poderão consumir dados de internet móvel."
+    },
+    "menuItens": {
+      "personalInformation": {
+        "name": "Informações pessoais"
+      },
+      "notification": {
+        "name": "Notificações"
+      },
+      "lightMode": {
+        "name": "Modo claro"
+      },
+      "termsConditions": {
+        "name": "Termos e condições"
+      },
+      "policy": {
+        "name": "Política de privacidade"
+      }
+    }
+  },
+  "myAccount": {
+    "title": "Minha conta",
+    "editProfile": "Editar informações de Perfil",
+    "fields": {
+      "changePassword": "Alterar senha",
+      "name": "Nome Completo",
+      "birthDate": "Data de Nascimento",
+      "email": "E-mail",
+      "cpf": "CPF",
+      "password": "Senha",
+      "gender": "Sexo",
+      "male": "Masculino",
+      "female": "Feminino",
+      "other": "Outro"
+    }
+  }
+}

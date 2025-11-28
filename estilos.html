@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Styles Tokens</title>
+		<link
+			rel="stylesheet"
+			href="https://release.eitri.calindra.com.br/themes/0f9e4a8f-70bc-4477-91ae-7dbd09e22ae8/theme.css" />
+		<style>
+			body {
+				font-family: var(--main-font), sans-serif;
+				padding: 20px;
+			}
+
+			.colors,
+			.border-size {
+				display: flex;
+				gap: 8px;
+				margin-bottom: 8px;
+			}
+
+			.cell {
+				text-align: center;
+				padding: 10px;
+				border: 1px solid #ccc;
+				font-weight: bold;
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+				cursor: pointer;
+			}
+			.cell-gradient {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 10px;
+				border: 1px solid #ccc;
+				font-weight: bold;
+				gap: 8px;
+				cursor: pointer;
+			}
+		</style>
+		<script>
+			const cssFileUrl =
+				'https://release.eitri.calindra.com.br/themes/0f9e4a8f-70bc-4477-91ae-7dbd09e22ae8/theme.css'
+
+			const variableNames = [
+				{ name: '--c1', token: '' },
+				{ name: '--c2', token: '' },
+				{ name: '--c3', token: '' },
+				{ name: '--c4', token: '' },
+				{ name: '--c5', token: '' },
+				{ name: '--c6', token: '' },
+				{ name: '--c7', token: '' },
+				{ name: '--c8', token: '' },
+				{ name: '--c9', token: '' },
+				{ name: '--c10', token: '' },
+				{ name: '--c11', token: '' },
+				{ name: '--c12', token: '' },
+				{ name: '--c13', token: '' },
+				{ name: '--c14', token: '' },
+				{ name: '--c15', token: '' },
+				{ name: '--c16', token: '' },
+				{ name: '--c17', token: '' },
+				{ name: '--c18', token: '' },
+				{ name: '--c19', token: '' },
+				{ name: '--c20', token: '' },
+				{ name: '--c21', token: '' },
+				{ name: '--c22', token: '' },
+				{ name: '--c23', token: '' },
+				{ name: '--c24', token: '' },
+				{ name: '--c25', token: '' },
+				{ name: '--c26', token: '' },
+				{ name: '--c27', token: '' },
+				{ name: '--c28', token: '' },
+				{ name: '--c29', token: '' },
+				{ name: '--c30', token: '' },
+				{ name: '--c31', token: '' },
+				{ name: '--c32', token: '' },
+				{ name: '--c33', token: '' },
+				{ name: '--c34', token: '' },
+				{ name: '--c35', token: '' },
+				{ name: '--transparent', token: '' },
+				{ name: '--gd-01', token: '' },
+				{ name: '--gd-02', token: '' },
+				{ name: '--gd-03', token: '' },
+				{ name: '--gd-04', token: '' },
+				{ name: '--t0', token: '' },
+				{ name: '--t1', token: '' },
+				{ name: '--t2', token: '' },
+				{ name: '--t3', token: '' },
+				{ name: '--t4', token: '' },
+				{ name: '--t5', token: '' },
+				{ name: '--t6', token: '' },
+				{ name: '--t7', token: '' },
+				{ name: '--t8', token: '' },
+				{ name: '--t9', token: '' },
+				{ name: '--t10', token: '' },
+				{ name: '--t11', token: '' },
+				{ name: '--t12', token: '' },
+				{ name: '--t13', token: '' },
+				{ name: '--t14', token: '' },
+				{ name: '--t15', token: '' },
+				{ name: '--t16', token: '' },
+				{ name: '--t17', token: '' },
+				{ name: '--t18', token: '' },
+				{ name: '--t19', token: '' },
+				{ name: '--line-height-small', token: '' },
+				{ name: '--line-height-medium', token: '' },
+				{ name: '--line-height-large', token: '' },
+				{ name: '--font-weight-light', token: '' },
+				{ name: '--font-weight-regular', token: '' },
+				{ name: '--font-weight-medium', token: '' },
+				{ name: '--font-weight-bold', token: '' },
+				{ name: '--main-font', token: '' },
+				{ name: '--font-size-default', token: '' },
+				{ name: '--font-color-default', token: '' },
+				{ name: '--line-height-default', token: '' },
+				{ name: '--bw0', token: '' },
+				{ name: '--bw1', token: '' },
+				{ name: '--bw3', token: '' },
+				{ name: '--bw4', token: '' },
+				{ name: '--br0', token: '' },
+				{ name: '--br1', token: '' },
+				{ name: '--br2', token: '' },
+				{ name: '--br3', token: '' },
+				{ name: '--br4', token: '' },
+				{ name: '--br5', token: '' },
+				{ name: '--sw-1', token: '' },
+				{ name: '--sw-2', token: '' },
+				{ name: '--sw-3', token: '' },
+				{ name: '--sw-4', token: '' },
+				{ name: '--s0', token: '' },
+				{ name: '--s1', token: '' },
+				{ name: '--s2', token: '' },
+				{ name: '--s3', token: '' },
+				{ name: '--s4', token: '' },
+				{ name: '--s5', token: '' },
+				{ name: '--s6', token: '' },
+				{ name: '--s7', token: '' },
+				{ name: '--s8', token: '' },
+				{ name: '--s9', token: '' },
+				{ name: '--s10', token: '' },
+				{ name: '--s11', token: '' },
+				{ name: '--s12', token: '' },
+				{ name: '--s13', token: '' },
+				{ name: '--s14', token: '' }
+			]
+		</script>
+	</head>
+	<body>
+		<main>
+			<div>
+				<h2>Paleta de Cores</h2>
+				<div>
+					<div class="colors">
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('primary-100')">
+							<div>primary-100</div>
+							<div>--c1</div>
+							<div id="--c1"></div>
+							<div style="background-color: var(--c1); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('primary-300')">
+							<div>primary-300</div>
+							<div>--c2</div>
+							<div id="--c2"></div>
+							<div style="background-color: var(--c2); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('primary-500')">
+							<div>primary-500</div>
+							<div>--c3</div>
+							<div id="--c3"></div>
+							<div style="background-color: var(--c3); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('primary-700')">
+							<div>primary-700</div>
+							<div>--c4</div>
+							<div id="--c4"></div>
+							<div style="background-color: var(--c4); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('primary-900')">
+							<div>primary-900</div>
+							<div>--c5</div>
+							<div id="--c5"></div>
+							<div style="background-color: var(--c5); width: 120px; height: 30px"></div>
+						</div>
+					</div>
+
+					<div class="colors">
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('secondary-100')">
+							<div>secondary-100</div>
+							<div>--c6</div>
+							<div id="--c6"></div>
+							<div style="background-color: var(--c6); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('secondary-300')">
+							<div>secondary-300</div>
+							<div>--c7</div>
+							<div id="--c7"></div>
+							<div style="background-color: var(--c7); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('secondary-500')">
+							<div>secondary-500</div>
+							<div>--c8</div>
+							<div id="--c8"></div>
+							<div style="background-color: var(--c8); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('secondary-700')">
+							<div>secondary-700</div>
+							<div>--c9</div>
+							<div id="--c9"></div>
+							<div style="background-color: var(--c9); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('secondary-900')">
+							<div>secondary-900</div>
+							<div>--c10</div>
+							<div id="--c10"></div>
+							<div style="background-color: var(--c10); width: 120px; height: 30px"></div>
+						</div>
+					</div>
+
+					<div class="colors">
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('tertiary-100')">
+							<div>tertiary-100</div>
+							<div>--c11</div>
+							<div id="--c11"></div>
+							<div style="background-color: var(--c11); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('tertiary-300')">
+							<div>tertiary-300</div>
+							<div>--c12</div>
+							<div id="--c12"></div>
+							<div style="background-color: var(--c12); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('tertiary-500')">
+							<div>tertiary-500</div>
+							<div>--c13</div>
+							<div id="--c13"></div>
+							<div style="background-color: var(--c13); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('tertiary-700')">
+							<div>tertiary-700</div>
+							<div>--c14</div>
+							<div id="--c14"></div>
+							<div style="background-color: var(--c14); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('tertiary-900')">
+							<div>tertiary-900</div>
+							<div>--c15</div>
+							<div id="--c15"></div>
+							<div style="background-color: var(--c15); width: 120px; height: 30px"></div>
+						</div>
+					</div>
+
+					<div class="colors">
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('accent-100')">
+							<div>accent-100</div>
+							<div>--c16</div>
+							<div id="--c16"></div>
+							<div style="background-color: var(--c16); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('accent-300')">
+							<div>accent-300</div>
+							<div>--c17</div>
+							<div id="--c17"></div>
+							<div style="background-color: var(--c17); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('accent-500')">
+							<div>accent-500</div>
+							<div>--c18</div>
+							<div id="--c18"></div>
+							<div style="background-color: var(--c18); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('accent-700')">
+							<div>accent-700</div>
+							<div>--c19</div>
+							<div id="--c19"></div>
+							<div style="background-color: var(--c19); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('accent-900')">
+							<div>accent-900</div>
+							<div>--c20</div>
+							<div id="--c20"></div>
+							<div style="background-color: var(--c20); width: 120px; height: 30px"></div>
+						</div>
+					</div>
+
+					<div class="colors">
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('neutral-100')">
+							<div>neutral-100</div>
+							<div>--c21</div>
+							<div id="--c21"></div>
+							<div style="background-color: var(--c21); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('neutral-300')">
+							<div>neutral-300</div>
+							<div>--c22</div>
+							<div id="--c22"></div>
+							<div style="background-color: var(--c22); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('neutral-500')">
+							<div>neutral-500</div>
+							<div>--c23</div>
+							<div id="--c23"></div>
+							<div style="background-color: var(--c23); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('neutral-700')">
+							<div>neutral-700</div>
+							<div>--c24</div>
+							<div id="--c24"></div>
+							<div style="background-color: var(--c24); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('neutral-800')">
+							<div>neutral-800</div>
+							<div>--c36</div>
+							<div id="--c36"></div>
+							<div style="background-color: var(--c36); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('neutral-900')">
+							<div>neutral-900</div>
+							<div>--c25</div>
+							<div id="--c25"></div>
+							<div style="background-color: var(--c25); width: 120px; height: 30px"></div>
+						</div>
+					</div>
+
+					<div class="colors">
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('positive-300')">
+							<div>positive-300</div>
+							<div>--c26</div>
+							<div id="--c26"></div>
+							<div style="background-color: var(--c26); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('positive-700')">
+							<div>positive-700</div>
+							<div>--c27</div>
+							<div id="--c27"></div>
+							<div style="background-color: var(--c27); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('warning-300')">
+							<div>warning-300</div>
+							<div>--c28</div>
+							<div id="--c28"></div>
+							<div style="background-color: var(--c28); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('warning-700')">
+							<div>warning-700</div>
+							<div>--c29</div>
+							<div id="--c29"></div>
+							<div style="background-color: var(--c29); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('negative-300')">
+							<div>negative-300</div>
+							<div>--c30</div>
+							<div id="--c30"></div>
+							<div style="background-color: var(--c30); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('negative-700')">
+							<div>negative-700</div>
+							<div>--c31</div>
+							<div id="--c31"></div>
+							<div style="background-color: var(--c31); width: 120px; height: 30px"></div>
+						</div>
+					</div>
+
+					<div class="colors">
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('support-01')">
+							<div>support-01</div>
+							<div>--c32</div>
+							<div id="--c32"></div>
+							<div style="background-color: var(--c32); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('support-02')">
+							<div>support-02</div>
+							<div>--c33</div>
+							<div id="--c33"></div>
+							<div style="background-color: var(--c33); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('support-03')">
+							<div>support-03</div>
+							<div>--c34</div>
+							<div id="--c34"></div>
+							<div style="background-color: var(--c34); width: 120px; height: 30px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('support-04')">
+							<div>support-04</div>
+							<div>--c35</div>
+							<div id="--c35"></div>
+							<div style="background-color: var(--c35); width: 120px; height: 30px"></div>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<h2>Gradients</h2>
+
+					<div style="width: 50%;">
+						<div
+							class="cell-gradient"
+							onclick="copiarParaClipboard('--gd-01')">
+							<div>gradient-01</div>
+							<div>--gd-01</div>
+							<div id="--gd-01"></div>
+							<div style="background-image: var(--gd-01); width: 120px; height: 30px"></div>
+						</div>
+
+						<div
+							class="cell-gradient"
+							onclick="copiarParaClipboard('--gd-02')">
+							<div>gradient-02</div>
+							<div>--gd-02</div>
+							<div id="--gd-02"></div>
+							<div style="background-image: var(--gd-02); width: 120px; height: 30px"></div>
+						</div>
+
+						<div
+							class="cell-gradient"
+							onclick="copiarParaClipboard('--gd-03')">
+							<div>gradient-03</div>
+							<div>--gd-03</div>
+							<div id="--gd-03"></div>
+							<div style="background-image: var(--gd-03); width: 120px; height: 30px"></div>
+						</div>
+
+						<div
+							class="cell-gradient"
+							onclick="copiarParaClipboard('--gd-04')">
+							<div>gradient-04</div>
+							<div>--gd-04</div>
+							<div id="--gd-04"></div>
+							<div style="background-image: var(--gd-04); width: 120px; height: 30px"></div>
+						</div>
+
+						<div
+							class="cell-gradient"
+							onclick="copiarParaClipboard('--gd-05')">
+							<div>gradient-05</div>
+							<div>--gd-05</div>
+							<div id="--gd-05"></div>
+							<div style="background-image: var(--gd-05); width: 120px; height: 30px"></div>
+						</div>
+
+					</div>
+				</div>
+
+				<div>
+					<h2>Tamanho da borda</h2>
+
+					<div class="border-size">
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('none')">
+							<div>none</div>
+							<div>--bw0</div>
+							<div id="--bw0"></div>
+							<div style="border: var(--bw0) solid #000; width: 20px; height: 20px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('hairline')">
+							<div>hairline</div>
+							<div>--bw1</div>
+							<div id="--bw1"></div>
+							<div style="border: var(--bw1) solid #000; width: 20px; height: 20px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('thin')">
+							<div>thin</div>
+							<div>--bw3</div>
+							<div id="--bw3"></div>
+							<div style="border: var(--bw3) solid #000; width: 20px; height: 20px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('thick')">
+							<div>thick</div>
+							<div>--bw4</div>
+							<div id="--bw4"></div>
+							<div style="border: var(--bw4) solid #000; width: 20px; height: 20px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('heavy')">
+							<div>heavy</div>
+							<div>--bw5</div>
+							<div id="--bw5"></div>
+							<div style="border: var(--bw5) solid #000; width: 20px; height: 20px"></div>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<h2>Border Radius</h2>
+
+					<div class="border-size">
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('none')">
+							<div>none</div>
+							<div>--br0</div>
+							<div id="--br0"></div>
+							<div
+								style="
+									border: 1px solid #000;
+									border-radius: var(--br0);
+									width: 40px;
+									height: 40px;
+								"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('micro')">
+							<div>micro</div>
+							<div>--br1</div>
+							<div id="--br1"></div>
+							<div
+								style="
+									border: 1px solid #000;
+									border-radius: var(--br1);
+									width: 40px;
+									height: 40px;
+								"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('small')">
+							<div>small</div>
+							<div>--br2</div>
+							<div id="--br2"></div>
+							<div
+								style="
+									border: 1px solid #000;
+									border-radius: var(--br2);
+									width: 40px;
+									height: 40px;
+								"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('medium')">
+							<div>medium</div>
+							<div>--br3</div>
+							<div id="--br3"></div>
+							<div
+								style="
+									border: 1px solid #000;
+									border-radius: var(--br3);
+									width: 40px;
+									height: 40px;
+								"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('circular')">
+							<div>circular</div>
+							<div>--br4</div>
+							<div id="--br4"></div>
+							<div
+								style="
+									border: 1px solid #000;
+									border-radius: var(--br4);
+									width: 40px;
+									height: 40px;
+								"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('pill')">
+							<div>pill</div>
+							<div>--br5</div>
+							<div id="--br5"></div>
+							<div
+								style="
+									border: 1px solid #000;
+									border-radius: var(--br5);
+									width: 60px;
+									height: 40px;
+								"></div>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<h2>Spacing</h2>
+
+					<div class="border-size">
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('none')">
+							<div>none</div>
+							<div>--s0</div>
+							<div id="--s0"></div>
+							<div style="border: 1px solid #000; width: var(--s0); height: 40px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('quark')">
+							<div>quark</div>
+							<div>--s1</div>
+							<div id="--s1"></div>
+							<div style="border: 1px solid #000; width: var(--s1); height: 40px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('nano')">
+							<div>nano</div>
+							<div>--s2</div>
+							<div id="--s2"></div>
+							<div style="border: 1px solid #000; width: var(--s2); height: 40px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('extra-small')">
+							<div>extra-small</div>
+							<div>--s3</div>
+							<div id="--s3"></div>
+							<div style="border: 1px solid #000; width: var(--s3); height: 40px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('small')">
+							<div>small</div>
+							<div>--s4</div>
+							<div id="--s4"></div>
+							<div style="border: 1px solid #000; width: var(--s4); height: 40px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('medium')">
+							<div>medium</div>
+							<div>--s5</div>
+							<div id="--s5"></div>
+							<div style="border: 1px solid #000; width: var(--s5); height: 40px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('large')">
+							<div>large</div>
+							<div>--s6</div>
+							<div id="--s6"></div>
+							<div style="border: 1px solid #000; width: var(--s6); height: 40px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('extra-large')">
+							<div>extra-large</div>
+							<div>--s7</div>
+							<div id="--s7"></div>
+							<div style="border: 1px solid #000; width: var(--s7); height: 40px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('big')">
+							<div>big</div>
+							<div>--s8</div>
+							<div id="--s8"></div>
+							<div style="border: 1px solid #000; width: var(--s8); height: 40px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('display')">
+							<div>display</div>
+							<div>--s9</div>
+							<div id="--s9"></div>
+							<div style="border: 1px solid #000; width: var(--s9); height: 40px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('huge')">
+							<div>huge</div>
+							<div>--s10</div>
+							<div id="--s10"></div>
+							<div style="border: 1px solid #000; width: var(--s10); height: 40px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('giant')">
+							<div>giant</div>
+							<div>--s11</div>
+							<div id="--s11"></div>
+							<div style="border: 1px solid #000; width: var(--s11); height: 40px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('jumbo')">
+							<div>jumbo</div>
+							<div>--s12</div>
+							<div id="--s12"></div>
+							<div style="border: 1px solid #000; width: var(--s12); height: 40px"></div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('immense')">
+							<div>immense</div>
+							<div>--s13</div>
+							<div id="--s13"></div>
+							<div style="border: 1px solid #000; width: var(--s13); height: 40px"></div>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<h2>Font Size</h2>
+
+					<div class="border-size">
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('quark')">
+							<div>quark</div>
+							<div>--t0</div>
+							<div id="--t0"></div>
+							<div style="font-size: var(--t0)">A</div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('nano')">
+							<div>nano</div>
+							<div>--t1</div>
+							<div id="--t1"></div>
+							<div style="font-size: var(--t1)">A</div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('extra-small')">
+							<div>extra-small</div>
+							<div>--t2</div>
+							<div id="--t2"></div>
+							<div style="font-size: var(--t2)">A</div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('small')">
+							<div>small</div>
+							<div>--t3</div>
+							<div id="--t3"></div>
+							<div style="font-size: var(--t3)">A</div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('medium')">
+							<div>medium</div>
+							<div>--t4</div>
+							<div id="--t4"></div>
+							<div style="font-size: var(--t4)">A</div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('large')">
+							<div>large</div>
+							<div>--t5</div>
+							<div id="--t5"></div>
+							<div style="font-size: var(--t5)">A</div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('extra-large')">
+							<div>extra-large</div>
+							<div>--t6</div>
+							<div id="--t6"></div>
+							<div style="font-size: var(--t6)">A</div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('big')">
+							<div>big</div>
+							<div>--t7</div>
+							<div id="--t7"></div>
+							<div style="font-size: var(--t7)">A</div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('display')">
+							<div>display</div>
+							<div>--t8</div>
+							<div id="--t8"></div>
+							<div style="font-size: var(--t8)">A</div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('huge')">
+							<div>huge</div>
+							<div>--t9</div>
+							<div id="--t9"></div>
+							<div style="font-size: var(--t9)">A</div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('giant')">
+							<div>giant</div>
+							<div>--t10</div>
+							<div id="--t10"></div>
+							<div style="font-size: var(--t10)">A</div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('jumbo')">
+							<div>jumbo</div>
+							<div>--t11</div>
+							<div id="--t11"></div>
+							<div style="font-size: var(--t11)">A</div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('default')">
+							<div>default</div>
+							<div>--t12</div>
+							<div id="--t12"></div>
+							<div style="font-size: var(--t12)">A</div>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<h2>Font Weight</h2>
+
+					<div class="border-size">
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('light')">
+							<div>light</div>
+							<div>--font-weight-light</div>
+							<div id="--font-weight-light"></div>
+							<div style="font-size: 16px; font-weight: var(--font-weight-light)">weight</div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('regular')">
+							<div>regular</div>
+							<div>--font-weight-regular</div>
+							<div id="--font-weight-regular"></div>
+							<div style="font-size: 16px; font-weight: var(--font-weight-regular)">weight</div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('medium')">
+							<div>medium</div>
+							<div>--font-weight-medium</div>
+							<div id="--font-weight-medium"></div>
+							<div style="font-size: 16px; font-weight: var(--font-weight-medium)">weight</div>
+						</div>
+						<div
+							class="cell"
+							onclick="copiarParaClipboard('bold')">
+							<div>bold</div>
+							<div>--font-weight-medium</div>
+							<div id="--font-weight-bold"></div>
+							<div style="font-size: 16px; font-weight: var(--font-weight-bold)">weight</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script>
+			// Função para carregar o arquivo CSS
+			function loadCSSFile(url) {
+				return new Promise((resolve, reject) => {
+					const xhr = new XMLHttpRequest()
+					xhr.open('GET', url)
+					xhr.onreadystatechange = function () {
+						if (xhr.readyState === 4) {
+							if (xhr.status === 200) {
+								resolve(xhr.responseText)
+							} else {
+								reject(new Error(`Failed to load ${url}: ${xhr.status} ${xhr.statusText}`))
+							}
+						}
+					}
+					xhr.send()
+				})
+			}
+
+			// Função para extrair variáveis CSS que começam com '--c1' até '--c30'
+			function extractCSSVariableValue(cssText, varName) {
+				const regex = new RegExp(`(${varName})\\s*:\\s*([^;]+);`)
+				const match = regex.exec(cssText)
+				if (match) {
+					return match[2].trim() // Retorna o valor da variável CSS encontrada
+				} else {
+					return null // Retorna null se a variável CSS não for encontrada
+				}
+			}
+
+			// Carrega o arquivo CSS e extrai as variáveis CSS relevantes
+			loadCSSFile(cssFileUrl)
+				.then(cssText => {
+					const css = variableNames.map(variable => {
+						const cssVariables = extractCSSVariableValue(cssText, variable.name)
+						return { ...variable, value: cssVariables }
+					})
+
+					css.forEach(item => {
+						try {
+							document.getElementById(item.name).innerHTML = item.value
+						} catch (e) {
+							console.log(e)
+						}
+					})
+
+					const cssVariables = extractCSSVariableValue(cssText, '--bw4')
+					console.log(cssVariables)
+				})
+				.catch(error => {
+					console.error('Failed to load CSS file:', error)
+				})
+
+			function copiarParaClipboard(texto) {
+				// Cria um elemento de input para colocar o texto dentro dele
+				let input = document.createElement('textarea')
+				input.value = texto
+				input.setAttribute('readonly', '')
+				input.style.position = 'absolute'
+				input.style.left = '-9999px' // Move o elemento fora da tela para não ser visível
+
+				document.body.appendChild(input)
+				input.select()
+				document.execCommand('copy') // Copia o texto selecionado para a área de transferência
+				document.body.removeChild(input) // Remove o elemento do DOM depois de copiar
+			}
+		</script>
+	</body>
+</html>

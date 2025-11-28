@@ -1,0 +1,45 @@
+export default function Quantity(props) {
+
+    const { quantity, handleItemQuantity, disable } = props
+
+    return (
+        <View 
+            display='flex' 
+            //borderWidth='hairline' 
+            //borderColor="neutral-300" 
+            backgroundColor='primary-300'
+            borderRadius="micro" 
+            width={90} 
+            height='35px' 
+            justifyContent='between' 
+            alignItems='center' 
+            paddingLeft="nano"
+        >
+            <View width='33%' alignItems='center' justifyContent='center'>
+                {quantity === 1 || disable ?
+                    <Icon iconKey="minus" width={16} height={16} color={'neutral-300'} />
+                    :
+                    <Touchable onPress={() => handleItemQuantity(-1)}>
+                        <Icon iconKey="minus" width={16} color={'accent-100'} />
+                    </Touchable>
+                }
+            </View>
+            <View width='33%' alignItems='center' justifyContent='center' paddingLeft="nano">
+                <Text 
+                    color={'accent-100'}
+                    fontSize='large'
+                    fontWeight='bold'
+                >{quantity}</Text>
+            </View>
+            <View width='33%' alignItems='center' justifyContent='center' paddingLeft="nano">
+                {disable ?
+                    <Icon iconKey="plus" width={16} height={16} color={'neutral-300'} />
+                    :
+                    <Touchable onPress={() => handleItemQuantity(1)}>
+                        <Icon iconKey="plus" width={16} height={16} color={'accent-100'} />
+                    </Touchable>
+                }
+            </View>
+        </View>
+    )
+}
